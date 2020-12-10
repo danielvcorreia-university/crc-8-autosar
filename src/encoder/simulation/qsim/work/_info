@@ -1,0 +1,244 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/danie/OneDrive/Documentos/ACA/CRC-8/simulation/qsim
+Eencoder
+Z1 w1607614164
+Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z3 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 ^M[R>L941CzW^5^z4gfb52
+Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z7 DPx9 cycloneiv 20 cycloneiv_components 0 22 A=5Z=j^V:4BYGPNKNFE9o0
+!i122 40
+R0
+Z8 8encoder.vho
+Z9 Fencoder.vho
+l0
+L78 1
+V]G@1I=GcmomQzP_Ea`fcX0
+!s100 T1j;2RXAAnHkgHk5=4ARD1
+Z10 OV;C;2020.1;71
+32
+Z11 !s110 1607614166
+!i10b 1
+Z12 !s108 1607614166.000000
+Z13 !s90 -work|work|encoder.vho|
+Z14 !s107 encoder.vho|
+!i113 1
+Z15 o-work work
+Z16 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 encoder 0 22 ]G@1I=GcmomQzP_Ea`fcX0
+!i122 40
+l207
+L128 914
+VERbD1REeMNajolQ<WE^B11
+!s100 XDlTB7M@MI28[IQBj_D<_3
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eencoder_vhd_vec_tst
+Z17 w1607614163
+R5
+R6
+!i122 41
+R0
+Z18 8Waveform.vwf.vht
+Z19 FWaveform.vwf.vht
+l0
+Z20 L32 1
+Vd<U=ngB?KKT0ZHFAl_0cY0
+!s100 1PRb<UZKhe9emhYL8QOLZ3
+R10
+32
+R11
+!i10b 1
+R12
+Z21 !s90 -work|work|Waveform.vwf.vht|
+Z22 !s107 Waveform.vwf.vht|
+!i113 1
+R15
+R16
+Aencoder_arch
+R5
+R6
+Z23 DEx4 work 19 encoder_vhd_vec_tst 0 22 d<U=ngB?KKT0ZHFAl_0cY0
+!i122 41
+l45
+Z24 L34 211
+Z25 V6Jd=SF35H`Q1m60[ol6TB1
+Z26 !s100 Iij`2>0c]WBW@KWoU7SZ>3
+R10
+32
+R11
+!i10b 1
+R12
+R21
+R22
+!i113 1
+R15
+R16
+Ehard_block
+R1
+R2
+R3
+R4
+R5
+R6
+R7
+!i122 40
+R0
+R8
+R9
+l0
+L35 1
+V5mcF]JUg7TS^l0EMa_h4A1
+!s100 Q?IbEnM>aW3cc=hi`GCc71
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 hard_block 0 22 5mcF]JUg7TS^l0EMa_h4A1
+!i122 40
+l65
+L51 20
+VMkbPfL8S?h^i>Mg3GSGD`1
+!s100 O>:lWQfHCcIaXgQ<=Tgn10
+R10
+32
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Eserialchecker
+Z27 w1607536655
+R3
+R7
+R2
+Z28 DPx6 altera 11 dffeas_pack 0 22 H5F:RRfLz82T3`4>@b7mS3
+R4
+R5
+R6
+Z29 DPx6 altera 28 altera_primitives_components 0 22 VSD=32;3391kSOd?PDZYj3
+!i122 38
+R0
+R8
+R9
+l0
+L80 1
+Vk]9Jh6IjVQ9CYIYTRY9P^2
+!s100 koMPWGUl45efAZB[f]bnB3
+R10
+32
+Z30 !s110 1607536657
+!i10b 1
+Z31 !s108 1607536656.000000
+R13
+R14
+!i113 1
+R15
+R16
+Astructure
+R3
+R7
+R2
+R28
+R4
+R5
+R6
+R29
+DEx4 work 13 serialchecker 0 22 k]9Jh6IjVQ9CYIYTRY9P^2
+!i122 38
+l163
+L96 723
+VhK^4d>V9W4@mnCeXMHC[B2
+!s100 c8bbo5T:0d:_bnc8lJO]U3
+R10
+32
+R30
+!i10b 1
+R31
+R13
+R14
+!i113 1
+R15
+R16
+Eserialchecker_vhd_vec_tst
+Z32 w1607536654
+R5
+R6
+!i122 39
+R0
+Z33 8Waveform1.vwf.vht
+Z34 FWaveform1.vwf.vht
+l0
+R20
+VhP:5Sk3X<^SgITmNmCani1
+!s100 mg83;<3ho>kG[OJo0L==S3
+R10
+32
+R30
+!i10b 1
+Z35 !s108 1607536657.000000
+Z36 !s90 -work|work|Waveform1.vwf.vht|
+Z37 !s107 Waveform1.vwf.vht|
+!i113 1
+R15
+R16
+Aserialchecker_arch
+R5
+R6
+DEx4 work 25 serialchecker_vhd_vec_tst 0 22 hP:5Sk3X<^SgITmNmCani1
+!i122 39
+l49
+L34 83
+Ve4KKP626j`o4cb1LIWGZD3
+!s100 >WEGKRF^?7all@F?]Xa6S1
+R10
+32
+R30
+!i10b 1
+R35
+R36
+R37
+!i113 1
+R15
+R16

@@ -1,0 +1,898 @@
+Timing Analyzer report for checker
+Thu Dec 10 15:36:50 2020
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'
+ 13. Slow 1200mV 85C Model Setup: 'clk'
+ 14. Slow 1200mV 85C Model Hold: 'clk'
+ 15. Slow 1200mV 85C Model Hold: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'
+ 16. Slow 1200mV 85C Model Metastability Summary
+ 17. Slow 1200mV 0C Model Fmax Summary
+ 18. Slow 1200mV 0C Model Setup Summary
+ 19. Slow 1200mV 0C Model Hold Summary
+ 20. Slow 1200mV 0C Model Recovery Summary
+ 21. Slow 1200mV 0C Model Removal Summary
+ 22. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 23. Slow 1200mV 0C Model Setup: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'
+ 24. Slow 1200mV 0C Model Setup: 'clk'
+ 25. Slow 1200mV 0C Model Hold: 'clk'
+ 26. Slow 1200mV 0C Model Hold: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'
+ 27. Slow 1200mV 0C Model Metastability Summary
+ 28. Fast 1200mV 0C Model Setup Summary
+ 29. Fast 1200mV 0C Model Hold Summary
+ 30. Fast 1200mV 0C Model Recovery Summary
+ 31. Fast 1200mV 0C Model Removal Summary
+ 32. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 33. Fast 1200mV 0C Model Setup: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'
+ 34. Fast 1200mV 0C Model Setup: 'clk'
+ 35. Fast 1200mV 0C Model Hold: 'clk'
+ 36. Fast 1200mV 0C Model Hold: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'
+ 37. Fast 1200mV 0C Model Metastability Summary
+ 38. Multicorner Timing Analysis Summary
+ 39. Board Trace Model Assignments
+ 40. Input Transition Times
+ 41. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 42. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 43. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 44. Setup Transfers
+ 45. Hold Transfers
+ 46. Report TCCS
+ 47. Report RSKM
+ 48. Unconstrained Paths Summary
+ 49. Clock Status Summary
+ 50. Unconstrained Input Ports
+ 51. Unconstrained Output Ports
+ 52. Unconstrained Input Ports
+ 53. Unconstrained Output Ports
+ 54. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2020  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; checker                                             ;
+; Device Family         ; Cyclone IV GX                                       ;
+; Device Name           ; EP4CGX15BF14C6                                      ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.01        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.5%      ;
+;     Processor 3            ;   0.4%      ;
+;     Processor 4            ;   0.2%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                                                                                         ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
+; Clock Name                             ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets                                    ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { binCounter_5bit:cnt|flipFlopDPET:ff0|Q } ;
+; clk                                    ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk }                                    ;
++----------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+--------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 507.36 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-----------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup Summary                             ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -1.310 ; -1.310        ;
+; clk                                    ; -0.971 ; -3.403        ;
++----------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold Summary                             ;
++----------------------------------------+-------+---------------+
+; Clock                                  ; Slack ; End Point TNS ;
++----------------------------------------+-------+---------------+
+; clk                                    ; 0.358 ; 0.000         ;
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 1.416 ; 0.000         ;
++----------------------------------------+-------+---------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary               ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; clk                                    ; -3.000 ; -17.000       ;
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -1.000 ; -1.000        ;
++----------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'                                                                                              ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node           ; Launch Clock ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; -1.310 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.395     ; 1.410      ;
+; -1.240 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.395     ; 1.340      ;
+; -1.177 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.395     ; 1.277      ;
+; -1.039 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.395     ; 1.139      ;
+; -1.036 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.395     ; 1.136      ;
+; -1.015 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.395     ; 1.115      ;
+; -1.012 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.395     ; 1.112      ;
+; -0.899 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.395     ; 0.999      ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                                         ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                 ; Launch Clock                           ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; -0.971 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 1.000        ; -0.042     ; 1.924      ;
+; -0.893 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.042     ; 1.846      ;
+; -0.829 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.042     ; 1.782      ;
+; -0.812 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.042     ; 1.765      ;
+; -0.800 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.042     ; 1.753      ;
+; -0.710 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; clk                                    ; clk         ; 1.000        ; -0.038     ; 1.667      ;
+; -0.696 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.796      ; 3.186      ;
+; -0.674 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 1.000        ; -0.042     ; 1.627      ;
+; -0.658 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.042     ; 1.611      ;
+; -0.615 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.796      ; 3.105      ;
+; -0.528 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.042     ; 1.481      ;
+; -0.518 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.796      ; 3.008      ;
+; -0.484 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.796      ; 2.974      ;
+; -0.123 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.796      ; 3.113      ;
+; -0.053 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.796      ; 3.043      ;
+; 0.041  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.889      ;
+; 0.044  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.886      ;
+; 0.044  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.886      ;
+; 0.045  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.885      ;
+; 0.050  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.796      ; 2.940      ;
+; 0.084  ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.846      ;
+; 0.096  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.796      ; 2.894      ;
+; 0.096  ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.834      ;
+; 0.100  ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.830      ;
+; 0.101  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.829      ;
+; 0.144  ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.786      ;
+; 0.224  ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.706      ;
+; 0.226  ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.704      ;
+; 0.236  ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.694      ;
+; 0.237  ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.693      ;
+; 0.271  ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; clk                                    ; clk         ; 1.000        ; -0.065     ; 0.659      ;
+; 0.298  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.038     ; 0.659      ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                         ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                               ; To Node                                 ; Launch Clock                           ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; 0.358 ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.580      ;
+; 0.371 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.593      ;
+; 0.373 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.595      ;
+; 0.382 ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.038      ; 0.577      ;
+; 0.386 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.608      ;
+; 0.389 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.611      ;
+; 0.475 ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.697      ;
+; 0.478 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.700      ;
+; 0.486 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.708      ;
+; 0.498 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.867      ; 2.741      ;
+; 0.499 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.721      ;
+; 0.518 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.740      ;
+; 0.520 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.867      ; 2.763      ;
+; 0.520 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.742      ;
+; 0.520 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.742      ;
+; 0.523 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.745      ;
+; 0.523 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 0.000        ; 0.065      ; 0.745      ;
+; 0.580 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.867      ; 2.823      ;
+; 0.649 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.867      ; 2.892      ;
+; 1.072 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.867      ; 2.815      ;
+; 1.075 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.867      ; 2.818      ;
+; 1.116 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.867      ; 2.859      ;
+; 1.144 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.042      ; 1.343      ;
+; 1.192 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.042      ; 1.391      ;
+; 1.201 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 0.000        ; 0.042      ; 1.400      ;
+; 1.223 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.867      ; 2.966      ;
+; 1.311 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.042      ; 1.510      ;
+; 1.319 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; clk                                    ; clk         ; 0.000        ; 0.038      ; 1.514      ;
+; 1.373 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.042      ; 1.572      ;
+; 1.374 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.042      ; 1.573      ;
+; 1.384 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.042      ; 1.583      ;
+; 1.418 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 0.000        ; 0.042      ; 1.617      ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'                                                                                              ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node           ; Launch Clock ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; 1.416 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.205     ; 0.888      ;
+; 1.523 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.205     ; 0.995      ;
+; 1.526 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.205     ; 0.998      ;
+; 1.529 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.205     ; 1.001      ;
+; 1.529 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.205     ; 1.001      ;
+; 1.640 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.205     ; 1.112      ;
+; 1.708 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.205     ; 1.180      ;
+; 1.815 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.205     ; 1.287      ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 572.74 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-----------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup Summary                              ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -1.117 ; -1.117        ;
+; clk                                    ; -0.746 ; -2.575        ;
++----------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold Summary                              ;
++----------------------------------------+-------+---------------+
+; Clock                                  ; Slack ; End Point TNS ;
++----------------------------------------+-------+---------------+
+; clk                                    ; 0.318 ; 0.000         ;
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 1.335 ; 0.000         ;
++----------------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary                ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; clk                                    ; -3.000 ; -17.000       ;
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -1.000 ; -1.000        ;
++----------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'                                                                                               ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node           ; Launch Clock ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; -1.117 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.362     ; 1.250      ;
+; -1.054 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.362     ; 1.187      ;
+; -1.007 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.362     ; 1.140      ;
+; -0.881 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.362     ; 1.014      ;
+; -0.877 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.362     ; 1.010      ;
+; -0.856 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.362     ; 0.989      ;
+; -0.854 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.362     ; 0.987      ;
+; -0.752 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.362     ; 0.885      ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                                          ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                 ; Launch Clock                           ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; -0.746 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 1.000        ; -0.039     ; 1.702      ;
+; -0.678 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.039     ; 1.634      ;
+; -0.626 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.039     ; 1.582      ;
+; -0.610 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.039     ; 1.566      ;
+; -0.604 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.039     ; 1.560      ;
+; -0.525 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; clk                                    ; clk         ; 1.000        ; -0.034     ; 1.486      ;
+; -0.509 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 1.000        ; -0.039     ; 1.465      ;
+; -0.507 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.650      ; 2.832      ;
+; -0.470 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.039     ; 1.426      ;
+; -0.438 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.650      ; 2.763      ;
+; -0.386 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.039     ; 1.342      ;
+; -0.364 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.650      ; 2.689      ;
+; -0.328 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.650      ; 2.653      ;
+; -0.024 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.650      ; 2.849      ;
+; 0.053  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.650      ; 2.772      ;
+; 0.147  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.791      ;
+; 0.150  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.788      ;
+; 0.150  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.788      ;
+; 0.151  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.787      ;
+; 0.155  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.650      ; 2.670      ;
+; 0.172  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.650      ; 2.653      ;
+; 0.184  ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.754      ;
+; 0.195  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.743      ;
+; 0.196  ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.742      ;
+; 0.199  ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.739      ;
+; 0.230  ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.708      ;
+; 0.305  ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.633      ;
+; 0.314  ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.624      ;
+; 0.314  ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.624      ;
+; 0.316  ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.622      ;
+; 0.355  ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; clk                                    ; clk         ; 1.000        ; -0.057     ; 0.583      ;
+; 0.378  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.034     ; 0.583      ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                                          ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                               ; To Node                                 ; Launch Clock                           ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; 0.318 ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.519      ;
+; 0.330 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.531      ;
+; 0.333 ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.034      ; 0.511      ;
+; 0.333 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.534      ;
+; 0.343 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.544      ;
+; 0.352 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.553      ;
+; 0.424 ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.625      ;
+; 0.427 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.628      ;
+; 0.441 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.642      ;
+; 0.450 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.713      ; 2.507      ;
+; 0.452 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.653      ;
+; 0.455 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.713      ; 2.512      ;
+; 0.465 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.666      ;
+; 0.466 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.667      ;
+; 0.468 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.669      ;
+; 0.468 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.669      ;
+; 0.469 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 0.000        ; 0.057      ; 0.670      ;
+; 0.498 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.713      ; 2.555      ;
+; 0.596 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.713      ; 2.653      ;
+; 0.951 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.713      ; 2.508      ;
+; 0.978 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.713      ; 2.535      ;
+; 1.010 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.713      ; 2.567      ;
+; 1.018 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.039      ; 1.201      ;
+; 1.064 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 0.000        ; 0.039      ; 1.247      ;
+; 1.081 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.713      ; 2.638      ;
+; 1.090 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.039      ; 1.273      ;
+; 1.176 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; clk                                    ; clk         ; 0.000        ; 0.034      ; 1.354      ;
+; 1.198 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.039      ; 1.381      ;
+; 1.234 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.039      ; 1.417      ;
+; 1.241 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.039      ; 1.424      ;
+; 1.252 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.039      ; 1.435      ;
+; 1.263 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 0.000        ; 0.039      ; 1.446      ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'                                                                                               ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node           ; Launch Clock ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; 1.335 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.192     ; 0.807      ;
+; 1.434 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.192     ; 0.906      ;
+; 1.434 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.192     ; 0.906      ;
+; 1.438 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.192     ; 0.910      ;
+; 1.439 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.192     ; 0.911      ;
+; 1.538 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.192     ; 1.010      ;
+; 1.598 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.192     ; 1.070      ;
+; 1.698 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.192     ; 1.170      ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup Summary                              ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.564 ; -0.564        ;
+; clk                                    ; -0.242 ; -0.662        ;
++----------------------------------------+--------+---------------+
+
+
++----------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold Summary                              ;
++----------------------------------------+-------+---------------+
+; Clock                                  ; Slack ; End Point TNS ;
++----------------------------------------+-------+---------------+
+; clk                                    ; 0.185 ; 0.000         ;
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 1.028 ; 0.000         ;
++----------------------------------------+-------+---------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++-----------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary                ;
++----------------------------------------+--------+---------------+
+; Clock                                  ; Slack  ; End Point TNS ;
++----------------------------------------+--------+---------------+
+; clk                                    ; -3.000 ; -17.394       ;
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -1.000 ; -1.000        ;
++----------------------------------------+--------+---------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'                                                                                               ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; Slack  ; From Node                            ; To Node           ; Launch Clock ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; -0.564 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.273     ; 0.778      ;
+; -0.527 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.273     ; 0.741      ;
+; -0.485 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.273     ; 0.699      ;
+; -0.411 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.273     ; 0.625      ;
+; -0.407 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.273     ; 0.621      ;
+; -0.402 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.273     ; 0.616      ;
+; -0.398 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.273     ; 0.612      ;
+; -0.334 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0.500        ; -0.273     ; 0.548      ;
++--------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                                          ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                               ; To Node                                 ; Launch Clock                           ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; -0.242 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.029      ; 1.863      ;
+; -0.192 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.029      ; 1.813      ;
+; -0.118 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.029      ; 1.739      ;
+; -0.114 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 1.000        ; -0.024     ; 1.077      ;
+; -0.110 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.500        ; 1.029      ; 1.731      ;
+; -0.069 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.024     ; 1.032      ;
+; -0.030 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.024     ; 0.993      ;
+; -0.020 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.024     ; 0.983      ;
+; -0.016 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.024     ; 0.979      ;
+; 0.051  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; clk                                    ; clk         ; 1.000        ; -0.022     ; 0.914      ;
+; 0.053  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 1.000        ; -0.024     ; 0.910      ;
+; 0.064  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.024     ; 0.899      ;
+; 0.140  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 1.000        ; -0.024     ; 0.823      ;
+; 0.438  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.029      ; 1.683      ;
+; 0.442  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.029      ; 1.679      ;
+; 0.463  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.487      ;
+; 0.466  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.484      ;
+; 0.466  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.484      ;
+; 0.466  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.484      ;
+; 0.490  ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.460      ;
+; 0.496  ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.454      ;
+; 0.497  ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.453      ;
+; 0.500  ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.450      ;
+; 0.518  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.029      ; 1.603      ;
+; 0.525  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 1.000        ; 1.029      ; 1.596      ;
+; 0.529  ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.421      ;
+; 0.566  ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.384      ;
+; 0.567  ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.383      ;
+; 0.572  ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.378      ;
+; 0.573  ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.377      ;
+; 0.591  ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; clk                                    ; clk         ; 1.000        ; -0.037     ; 0.359      ;
+; 0.606  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 1.000        ; -0.022     ; 0.359      ;
++--------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                          ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; Slack ; From Node                               ; To Node                                 ; Launch Clock                           ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+; 0.185 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.071      ; 1.465      ;
+; 0.193 ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.314      ;
+; 0.195 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.316      ;
+; 0.197 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.318      ;
+; 0.201 ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.022      ; 0.307      ;
+; 0.203 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.324      ;
+; 0.204 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.325      ;
+; 0.214 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.071      ; 1.494      ;
+; 0.242 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.071      ; 1.522      ;
+; 0.254 ; binCounter_5bit:cnt|flipFlopDPET:ff0|nQ ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.375      ;
+; 0.256 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.377      ;
+; 0.260 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q    ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.381      ;
+; 0.268 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; sereialInCRC:crc0|flipFlopDPET:ff4|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.389      ;
+; 0.268 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff1|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.389      ;
+; 0.281 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; 0.000        ; 1.071      ; 1.561      ;
+; 0.282 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff3|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.403      ;
+; 0.283 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff0|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.404      ;
+; 0.283 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff2|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.404      ;
+; 0.285 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q    ; sereialInCRC:crc0|flipFlopDPET:ff5|Q    ; clk                                    ; clk         ; 0.000        ; 0.037      ; 0.406      ;
+; 0.605 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.024      ; 0.713      ;
+; 0.628 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.024      ; 0.736      ;
+; 0.635 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 0.000        ; 0.024      ; 0.743      ;
+; 0.693 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; clk                                    ; clk         ; 0.000        ; 0.022      ; 0.799      ;
+; 0.698 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.024      ; 0.806      ;
+; 0.732 ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; clk                                    ; clk         ; 0.000        ; 0.024      ; 0.840      ;
+; 0.733 ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.024      ; 0.841      ;
+; 0.742 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; clk                                    ; clk         ; 0.000        ; 0.024      ; 0.850      ;
+; 0.771 ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; clk                                    ; clk         ; 0.000        ; 0.024      ; 0.879      ;
+; 0.819 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff1|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.071      ; 1.599      ;
+; 0.834 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff3|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.071      ; 1.614      ;
+; 0.853 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff2|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.071      ; 1.633      ;
+; 0.958 ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff4|Q  ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk         ; -0.500       ; 1.071      ; 1.738      ;
++-------+-----------------------------------------+-----------------------------------------+----------------------------------------+-------------+--------------+------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'binCounter_5bit:cnt|flipFlopDPET:ff0|Q'                                                                                               ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; Slack ; From Node                            ; To Node           ; Launch Clock ; Latch Clock                            ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+; 1.028 ; sereialInCRC:crc0|flipFlopDPET:ff4|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.163     ; 0.469      ;
+; 1.089 ; sereialInCRC:crc0|flipFlopDPET:ff6|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.163     ; 0.530      ;
+; 1.092 ; sereialInCRC:crc0|flipFlopDPET:ff1|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.163     ; 0.533      ;
+; 1.093 ; sereialInCRC:crc0|flipFlopDPET:ff3|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.163     ; 0.534      ;
+; 1.094 ; sereialInCRC:crc0|flipFlopDPET:ff2|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.163     ; 0.535      ;
+; 1.154 ; sereialInCRC:crc0|flipFlopDPET:ff0|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.163     ; 0.595      ;
+; 1.197 ; sereialInCRC:crc0|flipFlopDPET:ff7|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.163     ; 0.638      ;
+; 1.242 ; sereialInCRC:crc0|flipFlopDPET:ff5|Q ; flipFlopDPET:ff|Q ; clk          ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -0.500       ; -0.163     ; 0.683      ;
++-------+--------------------------------------+-------------------+--------------+----------------------------------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                                                 ;
++-----------------------------------------+--------+-------+----------+---------+---------------------+
+; Clock                                   ; Setup  ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++-----------------------------------------+--------+-------+----------+---------+---------------------+
+; Worst-case Slack                        ; -1.310 ; 0.185 ; N/A      ; N/A     ; -3.000              ;
+;  binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -1.310 ; 1.028 ; N/A      ; N/A     ; -1.000              ;
+;  clk                                    ; -0.971 ; 0.185 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS                         ; -4.713 ; 0.0   ; 0.0      ; 0.0     ; -18.394             ;
+;  binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; -1.310 ; 0.000 ; N/A      ; N/A     ; -1.000              ;
+;  clk                                    ; -3.403 ; 0.000 ; N/A      ; N/A     ; -17.394             ;
++-----------------------------------------+--------+-------+----------+---------+---------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; error         ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++-------------------------------------------------------------------+
+; Input Transition Times                                            ;
++----------------+--------------+-----------------+-----------------+
+; Pin            ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++----------------+--------------+-----------------+-----------------+
+; nRst           ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; serialIn       ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; clk            ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO~  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_NCSO~  ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++----------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; error         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.29e-09 V                   ; 2.39 V              ; -0.00317 V          ; 0.179 V                              ; 0.007 V                              ; 4.7e-10 s                   ; 4.72e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 7.29e-09 V                  ; 2.39 V             ; -0.00317 V         ; 0.179 V                             ; 0.007 V                             ; 4.7e-10 s                  ; 4.72e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 4.76e-09 V                   ; 2.4 V               ; -0.034 V            ; 0.102 V                              ; 0.065 V                              ; 2.49e-10 s                  ; 3.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 4.76e-09 V                  ; 2.4 V              ; -0.034 V           ; 0.102 V                             ; 0.065 V                             ; 2.49e-10 s                 ; 3.49e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.95e-09 V                   ; 2.38 V              ; -0.0335 V           ; 0.156 V                              ; 0.089 V                              ; 2.68e-10 s                  ; 2.6e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 5.95e-09 V                  ; 2.38 V             ; -0.0335 V          ; 0.156 V                             ; 0.089 V                             ; 2.68e-10 s                 ; 2.6e-10 s                  ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; error         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.21e-06 V                   ; 2.36 V              ; -0.00833 V          ; 0.113 V                              ; 0.035 V                              ; 6.32e-10 s                  ; 5.89e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 1.21e-06 V                  ; 2.36 V             ; -0.00833 V         ; 0.113 V                             ; 0.035 V                             ; 6.32e-10 s                 ; 5.89e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 7.93e-07 V                   ; 2.37 V              ; -0.0278 V           ; 0.106 V                              ; 0.115 V                              ; 2.69e-10 s                  ; 4.05e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 7.93e-07 V                  ; 2.37 V             ; -0.0278 V          ; 0.106 V                             ; 0.115 V                             ; 2.69e-10 s                 ; 4.05e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.76e-07 V                   ; 2.36 V              ; -0.00524 V          ; 0.088 V                              ; 0.006 V                              ; 4.05e-10 s                  ; 3.35e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 9.76e-07 V                  ; 2.36 V             ; -0.00524 V         ; 0.088 V                             ; 0.006 V                             ; 4.05e-10 s                 ; 3.35e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; error         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.66e-08 V                   ; 2.72 V              ; -0.0215 V           ; 0.161 V                              ; 0.061 V                              ; 4.44e-10 s                  ; 4.06e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.66e-08 V                  ; 2.72 V             ; -0.0215 V          ; 0.161 V                             ; 0.061 V                             ; 4.44e-10 s                 ; 4.06e-10 s                 ; No                        ; Yes                       ;
+; ~ALTERA_NCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.06e-08 V                   ; 2.86 V              ; -0.0341 V           ; 0.364 V                              ; 0.046 V                              ; 1.17e-10 s                  ; 2.6e-10 s                   ; No                         ; Yes                        ; 2.62 V                      ; 3.06e-08 V                  ; 2.86 V             ; -0.0341 V          ; 0.364 V                             ; 0.046 V                             ; 1.17e-10 s                 ; 2.6e-10 s                  ; No                        ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.81e-08 V                   ; 2.72 V              ; -0.0548 V           ; 0.144 V                              ; 0.087 V                              ; 2.55e-10 s                  ; 2.14e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 3.81e-08 V                  ; 2.72 V             ; -0.0548 V          ; 0.144 V                             ; 0.087 V                             ; 2.55e-10 s                 ; 2.14e-10 s                 ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Setup Transfers                                                                                                             ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+; From Clock                             ; To Clock                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+; clk                                    ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0        ; 0        ; 8        ; 0        ;
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk                                    ; 4        ; 4        ; 0        ; 0        ;
+; clk                                    ; clk                                    ; 24       ; 0        ; 0        ; 0        ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Hold Transfers                                                                                                              ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+; From Clock                             ; To Clock                               ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+; clk                                    ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; 0        ; 0        ; 8        ; 0        ;
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; clk                                    ; 4        ; 4        ; 0        ; 0        ;
+; clk                                    ; clk                                    ; 24       ; 0        ; 0        ; 0        ;
++----------------------------------------+----------------------------------------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 2     ; 2    ;
+; Unconstrained Input Port Paths  ; 20    ; 20   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------------------------------------------------------------------------+
+; Clock Status Summary                                                                                 ;
++----------------------------------------+----------------------------------------+------+-------------+
+; Target                                 ; Clock                                  ; Type ; Status      ;
++----------------------------------------+----------------------------------------+------+-------------+
+; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; binCounter_5bit:cnt|flipFlopDPET:ff0|Q ; Base ; Constrained ;
+; clk                                    ; clk                                    ; Base ; Constrained ;
++----------------------------------------+----------------------------------------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; nRst       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; serialIn   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; error       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; nRst       ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; serialIn   ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                          ;
++-------------+---------------------------------------------------------------------------------------+
+; Output Port ; Comment                                                                               ;
++-------------+---------------------------------------------------------------------------------------+
+; error       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++-------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Thu Dec 10 15:36:48 2020
+Info: Command: quartus_sta checker -c checker
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
+Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'checker.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name binCounter_5bit:cnt|flipFlopDPET:ff0|Q binCounter_5bit:cnt|flipFlopDPET:ff0|Q
+    Info (332105): create_clock -period 1.000 -name clk clk
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.310
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.310              -1.310 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+    Info (332119):    -0.971              -3.403 clk 
+Info (332146): Worst-case hold slack is 0.358
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.358               0.000 clk 
+    Info (332119):     1.416               0.000 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -17.000 clk 
+    Info (332119):    -1.000              -1.000 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -1.117
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -1.117              -1.117 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+    Info (332119):    -0.746              -2.575 clk 
+Info (332146): Worst-case hold slack is 0.318
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.318               0.000 clk 
+    Info (332119):     1.335               0.000 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -17.000 clk 
+    Info (332119):    -1.000              -1.000 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -0.564
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -0.564              -0.564 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+    Info (332119):    -0.242              -0.662 clk 
+Info (332146): Worst-case hold slack is 0.185
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.185               0.000 clk 
+    Info (332119):     1.028               0.000 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000             -17.394 clk 
+    Info (332119):    -1.000              -1.000 binCounter_5bit:cnt|flipFlopDPET:ff0|Q 
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4770 megabytes
+    Info: Processing ended: Thu Dec 10 15:36:50 2020
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:02
+
+
