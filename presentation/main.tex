@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{crc-8}
+\author{dani.vala.correia }
+\date{December 2020}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+
+\begin{document}
+
+\[\left(\sum ^{15}_{n=0} a_{n} \times \ x^{n+8}\right)\bmod \ \left( \ x^{8} +\ x^{5} +\ x^{3} +\ x^{2} +\ x +\ 1\ \right)\]
+
+\vspace{5mm}
+r7 \longleftarrow a2 \oplus a4 \oplus a6 \oplus a7 \oplus a8 \oplus a9 \oplus a10 \oplus a11 \oplus a14 \par
+r6 \longleftarrow a1 \oplus a3 \oplus a5 \oplus a6 \oplus a7 \oplus a8 \oplus a9 \oplus a10 \oplus a13 \par
+r5 \longleftarrow a0 \oplus a2 \oplus a4 \oplus a5 \oplus a6 \oplus a7 \oplus a8 \oplus a9 \oplus a12 \par
+r4 \longleftarrow a1 \oplus a2 \oplus a3 \oplus a5 \oplus a9 \oplus a10 \oplus a14 \par
+r3 \longleftarrow a0 \oplus a1 \oplus a2 \oplus a4 \oplus a8 \oplus a9 \oplus a13 \par
+r2 \longleftarrow a0 \oplus a1 \oplus a2 \oplus a3 \oplus a4 \oplus a6 \oplus a9 \oplus a10 \oplus a11 \oplus a12 \oplus a13 \oplus a14 \oplus a15 \par
+r1 \longleftarrow a0 \oplus a1 \oplus a3 \oplus a4 \oplus a5 \oplus a6 \oplus a7 \oplus a13 \oplus a15 \par
+r0 \longleftarrow a0 \oplus a3 \oplus a5 \oplus a7 \oplus a8 \oplus a9 \oplus a10 \oplus a11 \oplus a12 \oplus a15 \par
+\vspace{5mm}
+64 x-or gates \par
+11 x-or propagation time delays in the worst case \par
+\vspace{5mm}
+
+--stage0 \par
+A \longleftarrow a9 \oplus a10 \par
+B \longleftarrow a0 \oplus a4 \par
+C \longleftarrow a1 \oplus a3 \par
+D \longleftarrow a5 \oplus a7 \par
+E \longleftarrow a2 \oplus a14 \par
+F \longleftarrow a6 \oplus a8 \par
+G \longleftarrow a11 \oplus a12 \oplus a15 \par
+\vspace{5mm}
+
+--stage1 \par
+H \longleftarrow B \oplus a6 \par
+I \longleftarrow B \oplus a2 \oplus a9 \par
+J \longleftarrow C \oplus D \oplus a13 \par
+K \longleftarrow C \oplus E \oplus A \par
+L \longleftarrow F \oplus A \par
+\vspace{5mm}
+
+--stage2 \par
+r7 \longleftarrow E \oplus L \oplus a4 \oplus a7 \oplus a11 \par
+r6 \longleftarrow J \oplus L \par
+r5 \longleftarrow I \oplus D \oplus F \oplus a12 \par
+r4 \longleftarrow K \oplus a5 \par
+r3 \longleftarrow I \oplus a1 \oplus a8 \oplus a13 \par
+r2 \longleftarrow H \oplus K \oplus G  \par
+r1 \longleftarrow H \oplus J \oplus a15 \par
+r0 \longleftarrow a0 \oplus a3 \oplus D \oplus a8 \oplus A \oplus G \par
+\vspace{5mm}
+\vspace{5mm}
+1001001100111110 \longrightarrow 01011110 \equiv \(x^6 + x^4 + x^3 + x^2 + x\) \par
+0010100010111101 \longrightarrow 00110101 \equiv \(x^5 + x^4 + x^2 + 1\) \par
+0101011011100000 \longrightarrow 11101111 \equiv \(x^7 + x^6 + x^5 + x^3 + x^2 + x + 1\) \par
+0001001010100001 \longrightarrow 01100111 \equiv \(x^6 + x^5 + x^2 + x + 1\) \par
+0010101010101110 \longrightarrow 00010111 \equiv \(x^4 + x^2 + x + 1\) \par
+
+\vspace{5mm}
+
+\end{document}
